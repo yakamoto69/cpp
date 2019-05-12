@@ -44,18 +44,3 @@ void unique(std::multiset<int> A, const function<void(int)>& f) {
     f(*it);
   }
 }
-
-int msb(int i) {
-  i |= (i >>  1);
-  i |= (i >>  2);
-  i |= (i >>  4);
-  i |= (i >>  8);
-  i |= (i >> 16);
-  return i - (((unsigned int)i) >> 1);
-}
-
-int log2(int x) {
-  int i = 0;
-  while(x >>= 1) i++;
-  return i;
-}
