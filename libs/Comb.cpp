@@ -27,4 +27,8 @@ public:
     if (k < 0 || k > n) return 0ll;
     return F[n] * I[n - k] % MOD * I[k] % MOD;
   };
+
+  ll rev(int x) {
+    return F[x - 1] * I[x] % MOD;
+  }
 };
